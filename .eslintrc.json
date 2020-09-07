@@ -1,16 +1,15 @@
 {
 	"extends": [
-		"eslint:recommended",
-		"plugin:react/recommended",
-		"plugin:@typescript-eslint/eslint-recommended",
-		"plugin:@typescript-eslint/recommended",
+		"eslint:recommended", // for react
+		"plugin:@typescript-eslint/eslint-recommended", // for typescript
+		"plugin:@typescript-eslint/recommended", // for typescript
 		"plugin:prettier/recommended",
+		"plugin:react/recommended", // for react
 		"prettier"
 	],
 	"plugins": [
-		"react",
 		"@typescript-eslint",
-		"prettier"
+		"react" // for react
 	],
 	"env": {
 		"node": true,
@@ -18,12 +17,17 @@
 	},
 	"parser": "@typescript-eslint/parser",
 	"parserOptions": {
-		"ecmaFeatures": {
+		"ecmaFeatures": { // for react
 			"jsx": true
 		},
 		"ecmaVersion": 2020,
 		"sourceType": "module",
 		"project": "./tsconfig.json"
+	},
+	"settings": {
+		"react": { // to avoid warning 'Warning: React version not specified in eslint-plugin-react settings. See https://github.com/yannickcr/eslint-plugin-react#configuration .'
+			"version": "detect"
+		}
 	},
 	"rules": {
 		"complexity": ["error", 10],
