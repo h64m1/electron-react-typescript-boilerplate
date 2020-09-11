@@ -15,12 +15,13 @@
 		"react-scripts": "3.4.3",
 		"typescript": "^3.7.5"
 	},
-	"main": "src/main.ts",
+	"main": "src/main.js",
 	"scripts": {
 		"start": "react-scripts start",
 		"build": "react-scripts build",
 		"test": "react-scripts test",
 		"eject": "react-scripts eject",
+		"build:main": "tsc src/main.ts",
 		"electron": "electron ."
 	},
 	"eslintConfig": {
