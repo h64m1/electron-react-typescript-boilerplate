@@ -21,7 +21,7 @@
 		"build": "react-scripts build",
 		"test": "react-scripts test",
 		"eject": "react-scripts eject",
-		"build:main": "tsc src/main.ts",
+		"build:main": "tsc src/main.ts --outDir dist",
 		"electron": "electron ."
 	},
 	"eslintConfig": {
