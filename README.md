@@ -1,10 +1,10 @@
 # electron-react-typescript-boilerplate
-boilerplate for electron + react + typescript
+boilerplate for electron + react (create-react-app) + typescript
 
 ```
 $ cd app
 $ npm install
-$ npm electron-dev
+$ npm run electron-dev
 ```
 If you have the error below,
 ```
@@ -17,6 +17,6 @@ then install electron by the following command.
 ```
 $ node node_modules/electron/install.js
 ...
-$ npm electron-dev
+$ npm run electron-dev
 ```
 
