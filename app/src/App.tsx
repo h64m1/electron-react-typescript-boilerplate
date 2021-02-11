@@ -2,7 +2,24 @@ import React from 'react'
 import logo from './logo.svg'
 import './App.css'
 
+// const { api } = window
+
 function App(): React.ReactElement {
+	React.useEffect(() => {
+		const test = () => {
+			console.debug('start load ...')
+
+			try {
+				const messages = window.api.send()
+				console.debug(`success send api | message: ${messages}`)
+			} catch (e) {
+				// cannot call window.api without electron
+				console.debug('error: load failed')
+			}
+		}
+		test()
+	}, [])
+
 	return (
 		<div className="App">
 			<header className="App-header">

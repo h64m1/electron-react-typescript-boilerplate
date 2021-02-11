@@ -15,7 +15,7 @@
 		"react-scripts": "^4.0.0",
 		"typescript": "^3.7.5"
 	},
-	"main": "dist/main.js",
+	"main": "build/main/main.js",
 	"scripts": {
 		"electron-dev": "npm run build:main && concurrently -k \"BROWSER=none npm start\" \"npm:electron\"",
 		"start": "react-scripts start",

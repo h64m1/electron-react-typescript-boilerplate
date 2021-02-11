@@ -1,13 +1,22 @@
-import { app, BrowserWindow } from 'electron'
+import { app, BrowserWindow, ipcMain } from 'electron'
+import * as path from 'path'
 
 function createWindow() {
 	// Create the browser window.
+	console.debug('preload:', path.join(__dirname, 'preload.js'))
 	const win = new BrowserWindow({
 		width: 800,
 		height: 600,
 		webPreferences: {
 			nodeIntegration: false,
+			contextIsolation: true,
+			preload: path.join(__dirname, 'preload.js'),
 		},
+	})
+
+	console.debug('ipcMain add "send" handler ...')
+	ipcMain.handle('send', () => {
+		console.debug('send success')
 	})
 
 	// and load the index.html of the app.
