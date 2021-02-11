@@ -23,7 +23,7 @@
 		"build": "react-scripts build",
 		"test": "react-scripts test",
 		"eject": "react-scripts eject",
-		"build:main": "tsc main/main.ts --outDir dist"
+		"build:main": "tsc -p main"
 	},
 	"eslintConfig": {
 		"extends": "react-app"
