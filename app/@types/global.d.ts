@@ -1,9 +1,9 @@
 declare global {
 	interface Window {
-		api: SandBox
+		api: Api
 	}
 }
 
-export interface SandBox {
+export interface Api {
 	send: () => void
 }

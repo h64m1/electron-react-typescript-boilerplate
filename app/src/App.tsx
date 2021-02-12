@@ -2,8 +2,6 @@ import React from 'react'
 import logo from './logo.svg'
 import './App.css'
 
-// const { api } = window
-
 function App(): React.ReactElement {
 	React.useEffect(() => {
 		const test = () => {
